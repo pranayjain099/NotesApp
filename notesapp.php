@@ -37,8 +37,9 @@ if (!$conn) {
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src="/crud/logo.svg" height="28px" alt=""></a>
+        <a class="navbar-brand" href="#"><img src="/NotesApp/php_logo.svg" height="30px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,6 +64,23 @@ if (!$conn) {
             </form>
         </div>
     </nav>
+
+    <!-- Notes Form -->
+    <div class="container my-4">
+        <h2>Add a Note</h2>
+        <form action="/NotesApp/notesapp.php" method="POST">
+            <div class="form-group">
+                <label for="title">Note Title</label>
+                <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-group">
+                <label for="desc">Note Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Note</button>
+        </form>
+    </div>
 
     <!-- Bootstrap script -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
